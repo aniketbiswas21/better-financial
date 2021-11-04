@@ -1,0 +1,16 @@
+type User {
+  name: String
+  phoneNumber: String
+  email: String
+  grossPay: Float
+  employers: [String!]
+}
+
+enum Sort {
+  ASCENDING
+  DESCENDING
+}
+
+type Query {
+  getUserPayouts(sort: Sort!): [User!]!
+}
